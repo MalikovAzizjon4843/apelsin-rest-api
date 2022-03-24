@@ -1,0 +1,269 @@
+POST http://localhost:8086/api/customer
+Content-Type: application/json
+
+{
+  "name": "Aziz",
+  "country": "UZB",
+  "address": "Bukhara",
+  "phone": "+998919224843",
+  "active": true
+}
+###
+POST http://localhost:8086/api/customer
+Content-Type: application/json
+
+{
+  "name": "Kimdir",
+  "country": "UZB",
+  "address": "Qayerdir",
+  "phone": "+998909998877",
+  "active": true
+}
+###
+GET http://localhost:8086/api/customer/1
+
+###
+GET http://localhost:8086/api/customer/2
+###
+PUT http://localhost:8086/api/customer/2
+Content-Type: application/json
+
+{
+  "name": "Diyor",
+  "country": "UZB",
+  "address": "Navoiy",
+  "phone": "+999999999999",
+  "active": false
+}
+###
+GET http://localhost:8086/api/customer
+
+###
+DELETE http://localhost:8086/api/customer/2
+
+###
+GET http://localhost:8086/api/customer
+
+###
+POST http://localhost:8086/api/order
+Content-Type: application/json
+
+{
+  "date": "2022-03-21",
+  "customer_id": 1,
+  "active": true
+}
+
+###
+POST http://localhost:8086/api/order
+Content-Type: application/json
+
+{
+  "date": "2022-02-13",
+  "customer_id": 3,
+  "active": true
+}
+###
+GET http://localhost:8086/api/order
+
+###
+GET http://localhost:8086/api/order/1
+
+###
+PUT http://localhost:8086/api/order
+Content-Type: application/json
+
+{
+  "date": "2021-10-10",
+  "customer_id": 1,
+  "active": false
+}
+
+###
+DELETE http://localhost:8086/api/order/2
+
+###
+GET http://localhost:8086/api/category?product_id=1
+
+###
+POST http://localhost:8086/api/category
+Content-Type: application/json
+
+{
+  "name": "apple",
+  "active": true
+}
+
+###
+POST http://localhost:8086/api/category
+Content-Type: application/json
+
+{
+  "name": "hp",
+  "active": false
+}
+
+###
+GET http://localhost:8086/api/category/list
+
+###
+GET http://localhost:8086/api/category/1
+
+###
+PUT http://localhost:8086/api/category/1
+Content-Type:application/json
+
+{
+  "name": "acer",
+  "active": true
+}
+
+###
+DELETE http://localhost:8086/api/category/1
+
+###
+POST http://localhost:8086/api/product
+Content-Type: application/json
+
+{
+  "name": "product1",
+  "category_id": 1,
+  "description": "Something",
+  "price": 55298.28,
+  "photo": "some photo",
+  "active": true
+}
+
+###
+POST http://localhost:8086/api/product
+Content-Type: application/json
+
+{
+  "name": "samsung s10",
+  "category_id": 2,
+  "description": "bu qimmat tel",
+  "price": 211221.12,
+  "photo": " photo yoq uzr",
+  "active": true
+}
+
+###
+GET http://localhost:8086/api/product
+
+###
+GET http://localhost:8086/api/product/1
+
+###
+PUT http://localhost:8086/api/product/2
+Content-Type: application/json
+
+{
+  "name": "product2",
+  "category_id": 2,
+  "description": "Something2",
+  "price": 313131.31,
+  "photo": "some photo2",
+  "active": true
+}
+
+###
+DELETE http://localhost:8086/api/product/2
+
+###
+GET http://localhost:8086/api/category?product_id=2
+
+
+###
+POST http://localhost:8086/api/payment
+Content-Type: application/json
+
+{
+  "timestamp": "2022-01-01 12:01:58",
+  "amount": 12000,
+  "invoice_id": 1
+}
+
+###
+GET http://localhost:8086/api/product/list
+
+###
+GET  http://localhost:8086/api/product/details?product_id=2
+
+###
+POST http://localhost:8086/api/order
+Content-Type: application/json
+
+{
+  "customer_id": 1,
+  "product_id": 2,
+  "quantity": 10
+}
+
+###
+GET http://localhost:8086/api/order/details?order_id=2
+
+###
+POST http://localhost:8086/api/payment
+Content-Type: application/json
+
+{
+  "invoice_id": 3
+}
+
+###
+POST http://localhost:8086/api/order
+Content-Type: application/json
+
+{
+  "customer_id": 1,
+  "product_id":1,
+  "quantity": 10
+}
+###
+POST http://localhost:8086/api/payment
+Content-Type: application/json
+
+{
+  "invoice_id": 5
+}
+
+###
+GET http://localhost:8086/api/category/list
+
+###
+GET http://localhost:8086/api/category?product_id=1
+
+###
+POST http://localhost:8086/api/order
+Content-Type: application/json
+
+{
+  "customer_id": 2,
+  "product_id": 1,
+  "quantity": 10,
+  "active": true
+}
+
+###
+GET http://localhost:8086/api/order/details?order_id=3
+
+###
+POST http://localhost:8086/api/payment
+Content-Type: application/json
+
+{
+  "invoice_id": 1,
+  "amount": 5000
+}
+
+###
+GET http://localhost:8086/api/payment/details?id=4
+
+###
+GET http://localhost:8086/expired_invoices
+
+###
+GET http://localhost:8086/wrong_date_invoices
+
+###
+

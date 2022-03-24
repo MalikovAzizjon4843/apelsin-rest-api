@@ -1,0 +1,14 @@
+server:
+  port: 8086
+  error:
+    include-message: always
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/apelsin_rest_api
+    username: postgres
+    password: Aziz20034843
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
